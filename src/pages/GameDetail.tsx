@@ -5,6 +5,7 @@ import ExpandableTest from "../components/ExpandableTest";
 import DefinitionItem from "../components/DefinitionItem";
 import CriticScore from "../components/CriticScore";
 import GameAttributes from "../components/GameAttributes";
+import GameTrailer from "../components/GameTrailer";
 
 const GameDetail = () => {
     const {slug} = useParams();
@@ -22,6 +23,7 @@ const GameDetail = () => {
                 {game.description_raw}
             </ExpandableTest>
             <GameAttributes game={game}/>
+            <GameTrailer gameId={game.id}/>
         </>
     )
 };
